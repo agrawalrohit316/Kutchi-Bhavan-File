@@ -1,98 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kutchi Bhavan Girnar – Room Booking</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
+<meta charset="UTF-8">
+<title>Kutchi Bhavan Girnar | Room Booking</title>
+
+<!-- Mobile friendly -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Page background & font */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* Heading */
+h1{
+    text-align:center;
+    padding:20px;
+}
+
+/* Main container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:10px;
+}
+
+/* Each room row */
+.room{
+    display:flex;              /* Photo + Button side by side */
+    background:white;
+    margin-bottom:15px;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+/* Room photo */
+.room img{
+    width:50%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Right side content */
+.room-content{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+/* WhatsApp button */
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+/* Mobile view */
+@media(max-width:768px){
+    .room{
+        flex-direction:column;
     }
-    header {
-      background: #1a4d2e;
-      color: white;
-      padding: 25px;
-      text-align: center;
+    .room img,
+    .room-content{
+        width:100%;
     }
-    section {
-      padding: 20px;
-      background: white;
-      margin: 15px;
-      border-radius: 8px;
-    }
-    h2 {
-      color: #1a4d2e;
-    }
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background: #1ebc59;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Kutchi Bhavan Girnar</h1>
-  <p>Comfortable Rooms for Pilgrims & Visitors</p>
-</header>
+<h1>Kutchi Bhavan Girnar – Room Booking</h1>
 
-<section>
-  <h2>About Kutchi Bhavan</h2>
-  <p>
-    Kutchi Bhavan Girnar offers clean, peaceful and affordable rooms
-    for pilgrims visiting Girnar. Ideal for families and groups.
-  </p>
-</section>
+<div class="container">
 
-<section>
-  <h2>Facilities</h2>
-  <ul>
-    <li>Clean & Spacious Rooms</li>
-    <li>24×7 Water Supply</li>
-    <li>Peaceful Environment</li>
-    <li>Near Girnar</li>
-  </ul>
-</section>
+<!-- ROOM 1 -->
+<div class="room">
+    <img src="room1.jpg">
+    <div class="room-content">
+        <h3>AC Room 4 Bed – ₹1750</h3>
+        <a class="whatsapp-btn"
+        href="https://wa.me/919044839945?text=Hello%0ARoom%20Available%3F%0ABooking%20Name%3A%0ACheck-In%20Date%3A%0ACheck-Out%20Date%3A%0AAadhar%20Card"
+        target="_blank">
+        📲 Book on WhatsApp
+        </a>
+    </div>
+</div>
 
-<section>
-  <h2>Room Booking</h2>
-  <p>
-    For room availability and booking, contact us directly on WhatsApp.
-  </p>
+<!-- ROOM 2 -->
+<div class="room">
+    <img src="room2.jpg">
+    <div class="room-content">
+        <h3>AC Room 3 Bed – ₹1550</h3>
+        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+        📲 Book on WhatsApp
+        </a>
+    </div>
+</div>
 
-  <a class="btn" 
-     href="https://wa.me/919044839945?text=Hello%20Kutchi%20Bhavan%20Girnar,%20I%20want%20to%20book%20a%20room."
-     target="_blank">
-     📲 Book on WhatsApp
-  </a>
-</section>
+<!-- ROOM 3 -->
+<div class="room">
+    <img src="room3.jpg">
+    <div class="room-content">
+        <h3>AC Room 2 Bed – ₹950</h3>
+        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+        📲 Book on WhatsApp
+        </a>
+    </div>
+</div>
 
-<section>
-  <h2>Location</h2>
-  <p>Girnar, Junagadh, Gujarat</p>
-</section>
+<!-- ROOM 4 -->
+<div class="room">
+    <img src="room4.jpg">
+    <div class="room-content">
+        <h3>Non-AC Room 2 Bed – ₹750</h3>
+        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+        📲 Book on WhatsApp
+        </a>
+    </div>
+</div>
 
-<footer>
-  © Kutchi Bhavan Girnar | All Rights Reserved
-</footer>
+<!-- ROOM 5 -->
+<div class="room">
+    <img src="room5.jpg">
+    <div class="room-content">
+        <h3>Non-AC Room 4 Bed – ₹1550</h3>
+        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+        📲 Book on WhatsApp
+        </a>
+    </div>
+</div>
+
+</div>
 
 </body>
 </html>
