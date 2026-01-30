@@ -2,142 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kutchi Bhavan Girnar | Room Booking</title>
-
-<!-- Mobile friendly -->
+<title>Kutchi Bhavan Girnar Dharamshala</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Page background & font */
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f2f2f2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f5f5f5;
+    color:#222;
 }
 
-/* Heading */
-h1{
+/* HERO */
+.hero{
+    height:70vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('room1.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:20px;
+    color:#fff;
 }
 
-/* Main container */
-.container{
-    max-width:1000px;
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* SECTION */
+.section{
+    max-width:1100px;
     margin:auto;
-    padding:10px;
+    padding:60px 15px;
 }
 
-/* Each room row */
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+/* ROOM CARDS */
 .room{
-    display:flex;              /* Photo + Button side by side */
-    background:white;
-    margin-bottom:15px;
-    border-radius:6px;
+    display:flex;
+    background:#fff;
+    margin-bottom:25px;
+    border-radius:14px;
     overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-/* Room photo */
 .room img{
-    width:50%;
-    height:220px;
+    width:45%;
     object-fit:cover;
 }
 
-/* Right side content */
-.room-content{
-    width:50%;
+.room-details{
+    width:55%;
+    padding:30px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:center;
 }
 
-/* WhatsApp button */
-.whatsapp-btn{
+.room-details h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.room-details p{
+    font-size:17px;
+    margin-bottom:20px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+    display:inline-block;
     background:#25D366;
-    color:white;
-    padding:12px 20px;
+    color:#fff;
+    padding:14px 26px;
+    border-radius:30px;
+    font-size:17px;
     text-decoration:none;
-    border-radius:5px;
-    font-size:16px;
+    width:fit-content;
+    transition:.3s;
 }
 
-/* Mobile view */
+.whatsapp:hover{
+    background:#1ebe5d;
+    transform:translateY(-2px);
+}
+
+/* MOBILE */
 @media(max-width:768px){
-    .room{
-        flex-direction:column;
-    }
-    .room img,
-    .room-content{
-        width:100%;
-    }
+    .hero h1{font-size:30px;}
+    .room{flex-direction:column;}
+    .room img,.room-details{width:100%;}
 }
 </style>
 </head>
 
 <body>
 
-<h1>Kutchi Bhavan Girnar – Room Booking</h1>
-
-<div class="container">
-
-<!-- ROOM 1 -->
-<div class="room">
-    <img src="room1.jpg">
-    <div class="room-content">
-        <h3>AC Room 4 Bed – ₹1750</h3>
-        <a class="whatsapp-btn"
-        href="https://wa.me/919044839945?text=Hello%0ARoom%20Available%3F%0ABooking%20Name%3A%0ACheck-In%20Date%3A%0ACheck-Out%20Date%3A%0AAadhar%20Card"
-        target="_blank">
-        📲 Book on WhatsApp
-        </a>
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Kutchi Bhavan Girnar Dharamshala</h1>
+        <p>Comfortable Stay Near Girnar • 24 Hours Check-In</p>
     </div>
 </div>
 
-<!-- ROOM 2 -->
-<div class="room">
-    <img src="room2.jpg">
-    <div class="room-content">
-        <h3>AC Room 3 Bed – ₹1550</h3>
-        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
-        📲 Book on WhatsApp
-        </a>
-    </div>
-</div>
+<!-- ROOMS -->
+<div class="section">
+    <h2>Our Rooms</h2>
 
-<!-- ROOM 3 -->
-<div class="room">
-    <img src="room3.jpg">
-    <div class="room-content">
-        <h3>AC Room 2 Bed – ₹950</h3>
-        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
-        📲 Book on WhatsApp
-        </a>
+    <div class="room">
+        <img src="room1.jpg">
+        <div class="room-details">
+            <h3>AC Room – 4 Bed</h3>
+            <p>Tariff: ₹1750</p>
+            <a class="whatsapp" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+                Book on WhatsApp
+            </a>
+        </div>
     </div>
-</div>
 
-<!-- ROOM 4 -->
-<div class="room">
-    <img src="room4.jpg">
-    <div class="room-content">
-        <h3>Non-AC Room 2 Bed – ₹750</h3>
-        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
-        📲 Book on WhatsApp
-        </a>
+    <div class="room">
+        <img src="room2.jpg">
+        <div class="room-details">
+            <h3>AC Room – 3 Bed</h3>
+            <p>Tariff: ₹1550</p>
+            <a class="whatsapp" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+                Book on WhatsApp
+            </a>
+        </div>
     </div>
-</div>
 
-<!-- ROOM 5 -->
-<div class="room">
-    <img src="room5.jpg">
-    <div class="room-content">
-        <h3>Non-AC Room 4 Bed – ₹1550</h3>
-        <a class="whatsapp-btn" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
-        📲 Book on WhatsApp
-        </a>
+    <div class="room">
+        <img src="room3.jpg">
+        <div class="room-details">
+            <h3>AC Room – 2 Bed</h3>
+            <p>Tariff: ₹950</p>
+            <a class="whatsapp" href="https://wa.me/919044839945?text=Room%20Available%3F" target="_blank">
+                Book on WhatsApp
+            </a>
+        </div>
     </div>
-</div>
 
 </div>
 
